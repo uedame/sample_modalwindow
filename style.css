@@ -1,0 +1,88 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-transform: 100vh;
+	position: relative;
+}
+
+.container {
+	width: 100%;
+	min-width: 100%;
+	min-height: 100vh;
+	position: relative;
+	background: #333;
+}
+
+.container h1 {
+	font-size: 32px;
+	text-align: center;
+	padding: 10px;
+	color: #fff;
+}
+
+.videos {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.video {
+	width: 400px;
+	height: 300px;
+	border: 3px solid #fff;
+	border-radius: 5px;
+	box-shadow: 0 5 15 rgba(0, 0, 0, 0.7);
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.video video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: .2s linear
+}
+
+.video video:hover {
+	transform: scale(1.2);
+}
+
+
+.modal {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	background: rgba(0, 0, 0, 0.8);
+	display: none;
+}
+
+.modal video {
+	width: 750px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 5px;
+	border: 3px solid #fff;
+	object-fit: cover;
+}
+
+.modal span {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	font-size: 40px;
+	color: #fff;
+	z-index: 100;
+	cursor: pointer;
+}
+
+@media(max-width: 768px) {
+	.modal video {
+		width:90%;
+	}
+
+}
